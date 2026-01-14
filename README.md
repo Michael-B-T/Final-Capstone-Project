@@ -204,25 +204,8 @@ As I've said multiple times, the dataset is synthetic, that is by far the most i
 
 ## Next Steps & Recommendations
 
-Acquire a real-world dataset with validated depression scores (PHQ-9 or similar).
+The next steps would absolutly be acquiring a real world dataset, hopefully with validated depression scores (PHQ-9 or similar). Though the simulated data said it was possible, moving on from it into real data is the clear next step and would show that this idea has further merit. There are also some ways to improve the code and the data it has acess to. One idea is time-series behavior, seing how seasonal depression and other pasages of time can have their own effect.
 
-Improve feature engineering, especially around:
-
-- Time-series behavior
-
-- Interaction terms
-
-- Demographic normalization
-
-Extend modeling:
-
-Gradient boosting (XGBoost, LightGBM)
-
-- Calibration curves for better probability estimates
-
-- Incorporate explainability tools like SHAP or LIME.
-
-Collaborate with psychology/behavioral-health experts to refine features and validate assumptions.
 
 
 # Contact
