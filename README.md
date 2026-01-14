@@ -115,7 +115,7 @@ These visualizations confirmed that the synthetic data behaved realistically and
 
 An 80/20 split used for holdout evaluation
 
-I also used tratified sampling ensured proportional representation of both depression risk classes
+I also used stratified sampling ensured proportional representation of both depression risk classes
 
 ## Additional Processing
 
@@ -152,6 +152,8 @@ Grid Search with cross validation was applied to:
 
 Cross validation helped avoid overfitting and provided more stable performance estimates.
 
+Available graphs are in the attatched "outputs" folder or in "Capstone_EDA_and_Baseline_Final_Version.ipynb
+
 # Model Evaluation
 ## Metrics Used
 
@@ -181,12 +183,16 @@ Random Forest emerged as the most practical model for this phase due to:
 
 - Clearer permutation importance scores
 
-# Findings
-## Key Insights
+Due to this, Random Forest was the final model selected given its strong performance, stability, and interpretability.
 
-Sleep quality and social interaction frequency were the strongest predictors of depression risk. Interestingly, sleed duration was a much weaker predictor, meaning that it doesn't matter as much how long you sleep, only that it's restful. It might also be that depression causes restless sleep and that's the causation, not the other way around.
+# Findings
+## Key Insights and Actionable Findings
+
+Sleep quality and social interaction frequency were the strongest predictors of depression risk. Interestingly, sleep duration was a much weaker predictor, meaning that it doesn't matter as much how long you sleep, only that it's restful. It might also be that depression causes restless sleep and that's the causation, not the other way around.
 
 High screen time combined with low physical activity was associated with higher PHQ-9 values.
+
+Frequency of in-person social interaction significantly influences predicted risk levels.
 
 These patterns match established findings in behavioral psychology and mental-health research.
 
@@ -204,9 +210,38 @@ As I've said multiple times, the dataset is synthetic, that is by far the most i
 
 ## Next Steps & Recommendations
 
-The next steps would absolutly be acquiring a real world dataset, hopefully with validated depression scores (PHQ-9 or similar). Though the simulated data said it was possible, moving on from it into real data is the clear next step and would show that this idea has further merit. There are also some ways to improve the code and the data it has acess to. One idea is time-series behavior, seing how seasonal depression and other pasages of time can have their own effect.
+The next steps would absolutely be acquiring a real world dataset, hopefully with validated depression scores (PHQ-9 or similar). Though the simulated data said it was possible, moving on from it into real data is the clear next step and would show that this idea has further merit. There are also some ways to improve the code and the data it has access to. One idea is time-series behavior, seeing how seasonal depression and other pasages of time can have their own effect.
 
+## Repository Structure
 
+```text
+Capstone-Project/
+│
+├── data/
+│   ├── depression_synth.csv
+│   └── depression_synth_clean_for_modeling.csv
+│
+├── notebooks/
+│   ├── Capstone_EDA_and_Baseline_Final.ipynb
+│   └── Initial_Capstone_EDA_and_Baseline.ipynb
+│
+├── outputs/
+│   ├── eda_plots.png
+│   ├── roc_curve_logistic.png
+│   └── rf_perm_importance.png
+│
+└── README.md
+```
+## Dependencies
+
+This project uses the following libraries:
+
+- Python 3.10+
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
 
 # Contact
 
