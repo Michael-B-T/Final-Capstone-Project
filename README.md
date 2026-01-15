@@ -26,12 +26,12 @@ This initial phase demonstrates that behavioral features can signal elevated dep
 
 ## Problem Statement
 
-Depression affects millions of people annually, and early identification is a key factor in improving treatment outcomes. Because behavioral changes often emerge before clinical diagnosis, a model that can estimate risk based on routine lifestyle indicators could support screening efforts or population level mental-health surveillance. I want to find a way to combine machine learning and AI with psychological assessment tools. To that end, I've done my best to create a predictive model that estimates a person's risk of depression based on features of their daily habits and behavioral patterns.
+Depression affects millions of people annually, and early identification is a key factor in improving treatment outcomes. Seeing as behavioral changes often emerge before clinical diagnosis, a model that can estimate risk based on routine lifestyle indicators could support screening efforts or population level mental health surveillance. I want to find a way to combine machine learning and AI with psychological assessment tools. To that end, I've done my best to create a predictive model that estimates a person's risk of depression based on features of their daily habits and behavioral patterns.
 
 
 
 ## Goal:
-Build and evaluate machine learning models that can classify individuals into “higher-risk” or “lower-risk” categories for depression using behavioral/lifestyle data.
+Build and evaluate machine learning models that can classify individuals into “high risk” or “low risk” categories for depression using behavioral/lifestyle data.
 
 ## Potential benefits:
 
@@ -47,7 +47,7 @@ Learning type: Supervised learning
 
 Task: Binary classification — predict whether an individual’s profile places them at elevated risk of depression
 
-Model outputs: A probability score between 0–1 and a predicted risk class (0 = lower risk, 1 = higher risk)
+Model outputs: A probability score between 0 and 1 and a predicted risk class (0 means lower risk, 1 means higher risk)
 
 Models tested:
 
@@ -159,7 +159,7 @@ Available graphs are in the attatched "outputs" folder or in "Capstone_EDA_and_B
 
 Accuracy: overall proportion of correct predictions
 
-Recall: emphasized due to the goal of identifying higher-risk individuals
+Recall: emphasized due to the goal of identifying high risk individuals
 
 Precision: monitored to ensure the model does not over-predict risk
 
@@ -188,29 +188,30 @@ Due to this, Random Forest was the final model selected given its strong perform
 # Findings
 ## Key Insights and Actionable Findings
 
-Sleep quality and social interaction frequency were the strongest predictors of depression risk. Interestingly, sleep duration was a much weaker predictor, meaning that it doesn't matter as much how long you sleep, only that it's restful. It might also be that depression causes restless sleep and that's the causation, not the other way around.
+Sleep quality and social interaction frequency were the strongest predictors of depression risk. Interestingly, sleep duration was a much weaker predictor as there was little relation between lenght of sleep and depression risk. The factor that was more directly connected was the association with restful sleep.  
 
 High screen time combined with low physical activity was associated with higher PHQ-9 values.
 
-Frequency of in-person social interaction significantly influences predicted risk levels.
+Frequency of in person social interaction significantly influences predicted risk levels.
 
-These patterns match established findings in behavioral psychology and mental-health research.
+These patterns match established findings in behavioral psychology and mental health research.
 
 ## Interpretation for Non-Technical Stakeholders
 
 The model identifies lifestyle patterns that correlate with higher depression risk scores.
 
-These patterns should absolutely not be used for clinical decisions without validation on real human data. The data I used for this project was synthesized, and though it looks good, testing with real data should be the next step.
+These patterns should absolutely not be used for clinical decisions without validation on real human data. The data I used for this project was synthesized, and though it appears accurate, testing with real data should be the next step.
 
 The results support the idea that behavioral based risk screening models may be viable with appropriate data.
 
 ## Limitations
 
-As I've said multiple times, the dataset is synthetic, that is by far the most important aspect to consider. Additionally, correlations may not reflect real world variance. Clinical variables such as medication status or chronic illness were not included either, so there's much more data to consider in the future.
+As stated previously, the dataset is synthetic, that is by far the most important aspect to consider. Additionally, correlations may not reflect real world variance. Clinical variables such as medication status or chronic illness were not included either, so there's much more data to consider in the future.
 
 ## Next Steps & Recommendations
 
-The next steps would absolutely be acquiring a real world dataset, hopefully with validated depression scores (PHQ-9 or similar). Though the simulated data said it was possible, moving on from it into real data is the clear next step and would show that this idea has further merit. There are also some ways to improve the code and the data it has access to. One idea is time-series behavior, seeing how seasonal depression and other pasages of time can have their own effect.
+The next steps would absolutely be acquiring a real world dataset, hopefully with validated depression scores (PHQ-9 or similar). Though the simulated data said it was possible, moving on from it into real data is the clear next step and would show that this idea has further merit. There are also some ways to improve the code and the data it has access to. There is also more data I would like to add to future versions, such as seeing how someone's finances or where they lived could affect their depression rating. Another idea is time-series behavior, seeing how seasonal depression and other pasages of time can have their own effect. Additionally, due to the strong association with restful sleep, I'd like to further explore if depression causes restless sleep, or the other way around. 
+
 
 ## Repository Structure
 
